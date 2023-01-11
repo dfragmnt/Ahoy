@@ -46,7 +46,7 @@ function upload() {
     let c = document.getElementById("category").value
     let i = document.getElementById("picture").value
     let u = "Admin"
-    let d = new Date().toJSON().slice(0,10)
+    let d = new Date(year, monthIndex, day, hours, minutes)
     let e = "-"
     let v = Math.floor(Math.random()*(300 - 0))
     let dls = Math.floor(Math.random()*(300 - 0))

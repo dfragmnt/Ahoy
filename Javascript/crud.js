@@ -35,7 +35,7 @@ if (document.getElementById("app")) {
                 let i = document.getElementById("picture").value.slice(12)
                 let u = "Admin"
                 // let d = new Date().toJSON().slice(0,10)
-                let e = new Date().toJSON().slice(0,10)
+                let e = new Date(year, monthIndex, day, hours, minutes)
                 // let v = Math.floor(Math.random()*(300 - 0))
                 // let dls = Math.floor(Math.random()*(300 - 0))
                 // let s = Math.floor(Math.random()*(300 - 0))
