@@ -33,6 +33,7 @@ header {
   align-items: center;
   padding: 5px 20px;
   background-color: #2d3956;
+  border-bottom: 3px solid #ba9f6f;
 }
  /* <img> LOGO */
 header .logo {
@@ -103,8 +104,13 @@ nav a:hover {
   color: snow;
   /* margin-left: -8px; */
   padding: 5px 15px;
+  border: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+.login:hover {
+  cursor: pointer;
 }
 
 /*
@@ -213,128 +219,124 @@ nav a:hover {
   text-shadow: none;
 }
 
-
 /*
 //
 //
-//  S I D E B A R   S T A R T S   H E R E
+//  L O G I N   B E G I N S   H E R E   //
 //
 //
 */
 
-/* .aside-bar {
-  margin: 15px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #616a7f;
+.curtain {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  background-color: rgba(0,0,0,.8);
 }
 
-section > hr {
-  border: 1px solid #2c5171;
+.curtainActive {
+  opacity: 1;
+  z-index: 5;
 }
 
-.OS-cat {
-  color: black;
-  background-color: #e7e7e7;
-  display: flex;
-  justify-content: center;
-  margin: 30px 0 5px;
-}
-
-#OS-cat-first {
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.categories li {
-  margin: 3px 0;
-}
-
-.categories li a {
-  color: black;
-  text-shadow: 1px 1px 1px #2d3956;
-}
-
-.categories li a:hover {
-  color: red;
-  text-shadow: 3px 3px 2px #2d3956;
-} */
-
-/*
-//
-//
-//  L O G I N   M A I N   B E G I N S   H E R E   //
-//
-//
-*/
-
-.login-main {
-  margin: 0 30%;
-  margin-top: 2%;
-  background-image: url(../assets/pergamino.jpg);
-  /* background-color: rgba(186, 159, 111, 0.5); */
-  padding: 60px 0;
-  border: 1px solid snow;
-  box-shadow: 1px 1px 10px black;
+.login-container {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  width: 400px;
+  height: 400px;
+  z-index: -10;
+  background-color: #2d3956;
+  padding: 10px;
   border-radius: 10px;
+  border: 1px solid #ba9f6f;
+}
+
+.loginActive {
+  opacity: 1;
+  z-index: 10;
+}
+
+.lgn-xmark {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.2em;
+  padding: 3px 6px;
+}
+
+.lgn-xmark:hover {
+  cursor: pointer;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 50%;
 }
 
 .div-login {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
-.div-login form {
+.div-login .home img {
+  width: 64px;
+  border-radius: 50%;
+  border: 1px solid #ba9f6f;
+  background-color: #4682B4;
+}
+
+.div-login .logintext {
+  color: snow;
+}
+
+.lgn-form {
   display: flex;
   flex-direction: column;
-  background-color: rgba(232, 213, 180, 0.6);
-  border: 1px solid snow;
-  box-shadow: 1px 1px 6px black;
-  padding: 20px 15px;
-  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin: 15px 0;
+  border-top: 3px solid #ba9f6f;
 }
 
-#logintext {
-  text-shadow: 1px 1px 1px black;
-  font-size: 2em;
-  margin-bottom: 4px;
-}
-
-.div-login form input {
-  margin-bottom: 20px;
-  font-size: 1em;
-  border-radius: 40px;
-  border: 1px solid DimGray;
-  padding-left: 5px;
-  background-color: inherit;
-  color: black;
-  outline: 0;
-}
-
-#btn-login {
-  margin-top: 30px;
-  background-color: black;
-  color: white;
+.lgn-form input {
+  margin: 5px 0;
+  font-size: 1.4em;
+  border-radius: 15px;
   border: none;
-  padding: 10px 0;
+  text-indent: 10px;
 }
 
-#btn-login:hover {
-  color: #4682B4;
+#lgn-btn {
+  color: snow;
+  font-size: 20px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: #ba9f6f;
+  margin: 20px 0;
 }
 
-#btn-pass {
-  font-size: 0.8em;
-  text-align: center;
-  color: DimGray;
+#lgn-btn:hover {
+  cursor: pointer;
+  color: #ba9f6f;
+  background-color: #2d3956;
+  border: 1px solid #ba9f6f;
+  padding: 4px 9px;
 }
 
-.signup {
-  margin-top: 40px;
-  text-shadow: 1px 1px 1px #ba9f6f;
+.div-login a {
+  color: #ba9f6f;
 }
+
 
 /*
 //
@@ -502,13 +504,12 @@ form #name {
   margin: 20px auto;
   padding-top: 20px;
   border-radius: 10px;
+  border: 1px solid #ba9f6f
 }
 
 .create-section {
-  width: 40%;
   padding: 15px 0;
   margin: 20px auto;
-  border: 3px solid #ba9f6f;
   border-radius: 10px;
 }
 

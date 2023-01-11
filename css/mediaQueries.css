@@ -4,7 +4,7 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     #hamb-btn {
         font-size: 2em;
         display: inline;
@@ -20,6 +20,10 @@
 
     nav { 
         display: none;
+    }
+
+    header .logo {
+        width: 100px;
     }
 
     .index-main {

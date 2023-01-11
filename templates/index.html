@@ -27,7 +27,7 @@
       <div class="searchbar">
         <img width="20px" src="../assets/search.png" alt="">
         <input type="text" name="" value="" placeholder="Navigate..">
-        <a href="login.html" class="login">Login</a>
+        <button class="login" onclick="showLogin()">Log in</button>
       </div>
       <div id="hamb-btn">
         <i class="fa-solid fa-bars"></i>
@@ -51,6 +51,25 @@
             <p class="stats-numbers"><i title="Views" class="fa-regular fa-eye"></i>{{program.views}}</p>
             <p class="stats-numbers"><i title="Completed Downloads" class="fa-solid fa-check"></i>{{program.downloads}}</p>
           </div>
+        </div>
+      </div>
+
+      <!-- LOGIN POPUP WINDOW -->
+
+      <div class="curtain" onclick="hideLogin()"></div>
+
+      <div class="login-container">
+        <div class="div-login">
+          <i class="fa-solid fa-xmark lgn-xmark" onclick="hideLogin()"></i>
+          <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
+          <p class="logintext">GET ON BOARD!</p>
+          <form class="lgn-form" action="index.html" method="post">
+            <input type="email" name="email" placeholder="Username">
+            <input type="password" name="pass" placeholder="Password">
+            <button id="lgn-btn" type="button" onclick="login()">Log in</button>
+            <a href="#" id="btn-pass">Forgot Password?</a>
+          </form>
+          <p class="logintext">Don't have an account? <a href="register.html">Register</a></p>
         </div>
       </div>
     </main>
@@ -88,6 +107,7 @@
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../Javascript/crud.js"></script>
+    <script src="../Javascript/navbuttons.js"></script>
 
   </body>
 
