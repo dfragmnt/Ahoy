@@ -11,9 +11,9 @@ if (document.getElementById("app")) {
                 toEdit: [],
                 systems: [],
                 categories: [],
-                sysurl: "http://localhost:5000/getos",
-                caturl: "http://localhost:5000/getcat",
-                url: "http://localhost:5000/showtable"
+                sysurl: "http://dfragmnt.pythonanywhere.com/getos",
+                caturl: "http://dfragmnt.pythonanywhere.com/getcat",
+                url: "http://dfragmnt.pythonanywhere.com/showtable"
                 }
         },
         methods: {
@@ -54,7 +54,7 @@ if (document.getElementById("app")) {
                     // seeders : s,
                     // leechers : l
                 }
-                let url = "http://localhost:5000/editprogram/" + id
+                let url = "http://dfragmnt.pythonanywhere.com/editprogram/" + id
                 var options = {
                     body: JSON.stringify(program),
                     method: 'PUT',
@@ -67,7 +67,7 @@ if (document.getElementById("app")) {
             },
             newname(programid) {
                 console.log("test flag - row id: "+ programid)
-                const url = 'http://localhost:5000/delete/' + programid;
+                const url = 'http://dfragmnt.pythonanywhere.com/delete/' + programid;
                 var options = {
                     method: 'DELETE',
                 }
@@ -78,7 +78,7 @@ if (document.getElementById("app")) {
                     })
             },
             getProgram(id) {
-                const url = 'http://localhost:5000/program/' + id;
+                const url = 'http://dfragmnt.pythonanywhere.com/program/' + id;
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
@@ -146,7 +146,7 @@ function upload() {
         leechers : l
     }
 
-    let create_url = "http://localhost:5000/upload"
+    let create_url = "http://dfragmnt.pythonanywhere.com/upload"
     var options = {
         body: JSON.stringify(program),
         method: 'POST',

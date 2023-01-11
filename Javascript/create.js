@@ -7,8 +7,8 @@ if (document.getElementById("app")) {
                 systems: [],
                 categories: [],
                 errored: false,
-                sysurl: "http://localhost:5000/getos",
-                caturl: "http://localhost:5000/getcat"
+                sysurl: "http://dfragmnt.pythonanywhere.com/getos",
+                caturl: "http://dfragmnt.pythonanywhere.com/getcat"
                 }
         },
         methods: {
@@ -67,7 +67,7 @@ function upload() {
         leechers : l
     }
 
-    let create_url = "http://localhost:5000/upload"
+    let create_url = "http://dfragmnt.pythonanywhere.com/upload"
     var options = {
         body: JSON.stringify(program),
         method: 'POST',
