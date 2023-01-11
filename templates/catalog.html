@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>AHOY! Roam Free</title>
+    <link rel="icon" href="../assets/icon.ico">
+    <meta name="viweport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/656bcfcdc0.js" crossorigin="anonymous"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="crud-body">
+  <header>
+    <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
+    <nav>
+      <a href="#">Intro</a>
+      <a href="#">News</a>
+      <a href="catalog.html">CRUD</a>
+      <a href="#">About</a>
+      <a href="#">Support</a>
+    </nav>
+    <div class="searchbar">
+      <img width="20px" src="../assets/search.png" alt="">
+      <input type="text" name="" value="" placeholder="Navigate..">
+      <a href="login.html" class="login">Login</a>
+    </div>
+  </header>
+  
+  <!-- MAIN STARTS -->
+
+  <main class="catalog-main">
+    <!-- <h1>Acá voy a mostrar los Items de la BBDD Para ser Editados</h1> -->
+    <div class="container" id="app">
+            <section v-if="errored">
+             <p>Huh... Sorry! something went wrong. Please try again later!</p>
+            </section>
+            <section v-else>
+                <div v-if="loading" id="loading-text"><p>· · · L O A D I N G · · ·</p></div>
+                <div v-else>
+                  <h2>PROGRAMS</h2>
+                    <a id="create-redirect" href="createprogram.html">CREATE NEW</a>
+                    <table id="tabla">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Operating System</th>
+                            <th>Category</th>
+                            <th>Logo</th>
+                            <th>Uploader</th>
+                            <th><i title="Date" class="fa-regular fa-calendar"></i></th>
+                            <th><i title="Views" class="fa-regular fa-eye"></i></th>
+                            <th><i title="Seeders" class="fa-solid fa-seedling"></i></th>
+                            <th><i title="Leechers" class="fa-solid fa-down-long"></i></th>
+                            <th><i title="Completed Downloads" class="fa-solid fa-check"></i></th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-for="program in programs">
+                            <td>{{program.id}}</td>
+                            <td>{{program.name}}</td>
+                            <td>{{program.os}}</td>
+                            <td>{{program.category}}</td>
+                            <td>
+                                <img class="img-crud" :src="'../assets/catalog/' +program.img" :alt="program.name">
+                            </td>
+                            <td>{{program.uploader}}</td>
+                            <td>{{program.date}}</td>
+                            <td>{{program.views}}</td>
+                            <td>{{program.seeders}}</td>
+                            <td>{{program.leechers}}</td>
+                            <td>{{program.downloads}}</td>
+                            <td>
+                              <button v-on:click = "getProgram(program.id)" class="btn-crud" id="btn-edit"><i title="Edit" class="fa-regular fa-pen-to-square"></i></button>
+                              <button v-on:click = "newname(program.id)" class="btn-crud" id="btn-delete"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+            </section>
+            <div class="formEdit hide">
+              <form action="" id="editform">
+                <div>
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" :value="toEdit.name">
+                </div>
+                <div>
+                  <label for="os">Operating System</label>
+                  <select name="os" id="os">
+                    <option :value="toEdit.os">{{toEdit.os}}</option>
+                    <option v-for="system in systems" :value="system.name">{{system.name}}</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="category">Category</label>
+                  <select name="category" id="category">
+                    <option :value="toEdit.category">{{toEdit.category}}</option>
+                    <option v-for="category in categories" :value="category.name">{{category.name}}</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="picture">Image</label>
+                  <input type="file" name="picture" id="picture">
+                </div class="contenedor-btns-edit">
+                  <button class="edf-btn" id="edfb-u" type="button" v-on:click="update(toEdit.id)">Update</button>
+                  <button class="edf-btn" id="edfb-c" type="button" onclick="cancel()">Cancel</button>
+              </form>
+            </div>
+    </div>
+    <div class="space"></div>
+    
+  </main>
+
+  <!-- MAIN ENDS HERE -->
+  
+  <footer>
+    <a href="">AHOY!</a>
+    <div class="list">
+      <ul class="help">
+        <p>HELP</p>
+        <hr>
+        <li>VPN</li>
+        <li>ADBLOCKING</li>
+        <li>TORRENTING</li>
+        <li>SAFE BROWSING</li>
+      </ul>
+      <ul class="community">
+        <p>COMMUNITY</p>
+        <hr>
+        <li>FORUMS</li>
+        <li>REQUEST</li>
+        <li>TOP UPLOADERS</li>
+        <li>GROUPS</li>
+      </ul>
+      <ul class="language">
+        <p>LANGUAGE</p>
+        <hr>
+        <li>English</li>
+        <li>Español</li>
+        <li>Deutsch</li>
+        <li>日本語</li>
+        <li>中文(简体)</li>
+      </ul>
+    </div>
+    <p class="copy">Dfragmnt © 2022 · Codo a Codo 22522</p>
+  </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../Javascript/crud.js"></script>
+</body>
+</html>

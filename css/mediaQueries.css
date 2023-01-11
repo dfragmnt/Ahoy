@@ -1,0 +1,28 @@
+@media only screen and (max-width: 4100px) {
+    #hamb-btn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #hamb-btn {
+        font-size: 2em;
+        display: inline;
+    }
+
+    .fa-bars {
+        color: #ba9f6f;
+    }
+
+    .fa-bars:hover {
+        cursor: pointer;
+    }
+
+    nav { 
+        display: none;
+    }
+
+    .index-main {
+        width: 90vw;
+    }
+}

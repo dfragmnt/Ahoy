@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>AHOY! Roam Free</title>
+    <link rel="icon" href="../assets/icon.ico">
+    <meta name="viweport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mediaQueries.css">
+  </head>
+
+<!-- BODY STARTS -->
+
+  <body class="index-body">
+    <header>
+      <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
+      <nav>
+        <a href="#">Intro</a>
+        <a href="#">News</a>
+        <a href="">Categories</a>
+        <a href="catalog.html">CRUD</a>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+      </nav>
+      <div class="searchbar">
+        <img width="20px" src="../assets/search.png" alt="">
+        <input type="text" name="" value="" placeholder="Navigate..">
+        <a href="login.html" class="login">Login</a>
+      </div>
+      <div id="hamb-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+
+<!-- MAIN STARTS -->
+
+    <main class="index-main">
+      <div class="content" id="app">
+        <div v-for="program in programs" class="card">
+          <div class="card-img-cnt">
+            <img class="imgCard" :src="'../assets/catalog/' +program.img" :alt="program.name + ' picture'">
+          </div>
+          <p class="name">{{program.name}}</p>
+          <div>
+            <p id="opsystem">· {{program.os}}</p>
+            <p>· {{program.category}}</p>
+          </div>
+          <div class="stats-container">
+            <p class="stats-numbers"><i title="Views" class="fa-regular fa-eye"></i>{{program.views}}</p>
+            <p class="stats-numbers"><i title="Completed Downloads" class="fa-solid fa-check"></i>{{program.downloads}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="aside-bar">
+        <aside>
+          <section>
+            <a href="#" class="OS-cat" id="OS-cat-first">PC</a>
+            <hr>
+            <ul class="categories">
+              <li><a href="">VPN</a></li>
+              <li><a href="">Adblock</a></li>
+              <li><a href="">Video Streaming</a></li>
+              <li><a href="">Audio Streaming</a></li>
+              <li><a href="">Books</a></li>
+              <li><a href="">Applications</a></li>
+              <li><a href="">Games</a></li>
+            </ul>
+          </section>
+          <section>
+            <a href="#" class="OS-cat">Android</a>
+            <hr>
+              <ul class="categories">
+                <li><a href="">Jailbreak</a></li>
+                <li><a href="">Adblock</a></li>
+                <li><a href="">Video Streaming</a></li>
+                <li><a href="">Audio Streaming</a></li>
+                <li><a href="">Books</a></li>
+                <li><a href="">Applications</a></li>
+                <li><a href="">Games</a></li>
+              </ul>
+          </section>
+          <section>
+            <a href="#" class="OS-cat">iOS</a>
+            <hr>
+              <ul class="categories">
+                <li><a href="">Jailbreak</a></li>
+                <li><a href="">Adblock</a></li>
+                <li><a href="">Video Streaming</a></li>
+                <li><a href="">Audio Streaming</a></li>
+                <li><a href="">Books</a></li>
+                <li><a href="">Applications</a></li>
+                <li><a href="">Games</a></li>
+              </ul>
+          </section>
+        </aside>
+
+      </div> -->
+    </main>
+
+    <footer>
+      <a href="">AHOY!</a>
+      <div class="list">
+        <ul class="help">
+          <p>HELP</p>
+          <hr>
+          <li>VPN</li>
+          <li>ADBLOCKING</li>
+          <li>TORRENTING</li>
+          <li>SAFE BROWSING</li>
+        </ul>
+        <ul class="community">
+          <p>COMMUNITY</p>
+          <hr>
+          <li>FORUMS</li>
+          <li>REQUEST</li>
+          <li>TOP UPLOADERS</li>
+          <li>GROUPS</li>
+        </ul>
+        <ul class="language">
+          <p>LANGUAGE</p>
+          <hr>
+          <li>English</li>
+          <li>Español</li>
+          <li>Deutsch</li>
+          <li>日本語</li>
+          <li>中文(简体)</li>
+        </ul>
+      </div>
+      <p class="copy">Dfragmnt © 2022 · Codo a Codo 22522</p>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../Javascript/crud.js"></script>
+
+  </body>
+
+<!-- BODY ENDS -->
+
+</html>

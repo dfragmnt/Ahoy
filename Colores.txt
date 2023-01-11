@@ -1,0 +1,23 @@
+COLORES SCARLET KNIGHT
+
+Azul Oscuro: #2d3956 \\ rgb(45, 57, 86);
+
+Azul Intermedio: #455372 \\ rgb(69, 83, 114);
+
+Gris Claro: #616a7f \\ rgb(97, 106, 127);
+
+Blanco oscuro: #e7e7e7 \\ rgb(231,231,231);
+
+Cyan claro: #e0e9e9 \\ rgb(224,233,233);
+
+RED: #ff1a00 \\ rgb(255,26,0);
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Magenta: #cc0033 \\ rgb(204, 0, 51);
+
+Gris: #5e6a72 \\ rgb(94, 106, 114);
+
+Negro: black;
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

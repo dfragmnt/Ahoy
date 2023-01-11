@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>AHOY! Roam Free</title>
+    <link rel="icon" href="../assets/icon.ico">
+    <meta name="viweport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="index-body">
+  <header>
+    <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
+    <nav>
+      <a href="#">Intro</a>
+      <a href="#">News</a>
+      <a href="catalog.html">CRUD</a>
+      <a href="#">About</a>
+      <a href="#">Support</a>
+    </nav>
+    <div class="searchbar">
+      <img width="20px" src="../assets/search.png" alt="">
+      <input type="text" name="" value="" placeholder="Navigate..">
+      <a href="login.html" class="login">Login</a>
+    </div>
+  </header>
+  
+  <!-- MAIN STARTS -->
+
+  <main class="createprog-main">
+    <div class="create-section" id="app">
+        <form action="">
+          <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div>
+            <label for="os">Operating System: </label>
+            <select name="os" id="os">
+              <option value="">-Select Operating System-</option>
+              <option v-for="system in systems" :value="system.name">{{system.name}}</option>
+            </select>
+          </div>
+          <div>
+            <label for="category">Category: </label>
+            <select name="category" id="category">
+              <option value="">-Select a Category-</option>
+              <option v-for="category in categories" :value="category.name">{{category.name}}</option>
+            </select>
+          </div>
+          <div>
+            <label for="picture">Image: </label>
+            <input type="file" name="picture" id="picture">
+          </div>
+          <div>
+            <button id="createb-upl" type="button" onclick="upload()">Upload</button>
+          </div>
+        </form>
+    </div>
+  </main>
+
+  <!-- MAIN ENDS HERE -->
+  
+  <footer>
+    <a href="">AHOY!</a>
+    <div class="list">
+      <ul class="help">
+        <p>HELP</p>
+        <hr>
+        <li>VPN</li>
+        <li>ADBLOCKING</li>
+        <li>TORRENTING</li>
+        <li>SAFE BROWSING</li>
+      </ul>
+      <ul class="community">
+        <p>COMMUNITY</p>
+        <hr>
+        <li>FORUMS</li>
+        <li>REQUEST</li>
+        <li>TOP UPLOADERS</li>
+        <li>GROUPS</li>
+      </ul>
+      <ul class="language">
+        <p>LANGUAGE</p>
+        <hr>
+        <li>English</li>
+        <li>Español</li>
+        <li>Deutsch</li>
+        <li>日本語</li>
+        <li>中文(简体)</li>
+      </ul>
+    </div>
+    <p class="copy">Dfragmnt © 2022 · Codo a Codo 22522</p>
+  </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../Javascript/crud.js"></script>
+</body>
+</html>

@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+* {
+  font-family: "rubik", sans-serif;
+  text-rendering: optimizeLegibility;
+  text-decoration-line: none;
+  list-style: none;
+  padding-inline-start: unset;
+  padding: 0;
+  margin: 0;
+}
+
+.index-body {
+  background-color: black;
+  /* background-image: url(../assets/pergamino.jpg); */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/*
+//
+//
+//  N A V   B E G I N S   H E R E   //
+//
+//
+*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #2d3956;
+}
+ /* <img> LOGO */
+header .logo {
+  width: 86px;
+  background-color: #4682B4;
+  border-radius: 50%;
+  border: 1px solid #ba9f6f;
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  margin: 0 10px;
+  height: 100px;
+}
+
+nav a {
+  color: #ba9f6f;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+  font-size: 1.4em;
+}
+
+nav a:hover {
+  background-color: #4682B4;
+  border: 1px solid #ba9f6f;
+  border-radius: 5px;
+}
+
+/*
+
+//  S E A R C H   B A R   //
+
+*/
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  background-color: snow;
+  border-radius: 15px;
+  padding-left: 4px;
+}
+
+.searchbar img {  
+  border-radius: 2px;
+}
+
+.searchbar input {
+  border: none;
+  outline: 0;
+  font-size: 1em;
+  text-indent: 5px;
+  margin: 0 4px;
+  width: 150px;
+}
+
+/*
+
+//  LOGIN   //
+
+*/
+
+.login {
+  background-color: #ba9f6f;
+  color: snow;
+  /* margin-left: -8px; */
+  padding: 5px 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/*
+//
+//   N A V   E N D S   H E R E
+//
+*/
+
+/*
+//
+//
+//  I N D E X   M A I N   B E G I N S   H E R E   //
+//
+//
+*/
+
+.index-main {
+  flex-grow: 1;
+  padding: 10px 10px;
+  margin: 40px auto;
+  box-shadow: 1px 1px 10px snow;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  height: fit-content;
+  width: 70vw;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2d3956;
+  border: 1px solid #ba9f6f;
+  border-radius: 10px;
+  margin: 15px 10px;
+  padding: 10px;
+  width: 120px;
+  height: 300px;
+}
+
+.card:hover {
+ cursor: pointer;
+}
+
+.card-img-cnt {
+  display: flex;
+  width: auto;
+  height: 100px;
+  align-items: center;
+}
+
+.imgCard {
+  width: 100px;
+}
+
+.card .name {
+  border-bottom: 1px solid #ba9f6f;
+  border-top: 3px solid #ba9f6f;
+  padding: 8px 0;
+  margin: 8px 0;
+  width: 100%;
+}
+
+#opsystem {
+  margin: 10px 0;
+}
+
+.card p {
+  color: snow;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  width: 100%;
+  bottom: 0px;
+}
+
+.stats-numbers {
+ border: 2px solid #ba9f6f;
+ border-radius: 8px;
+ padding-right: 5px;
+ font-size: 11px;
+ text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.stats-numbers i {
+  margin-right: 5px;
+  background-color: #ba9f6f;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 4px;
+  text-shadow: none;
+}
+
+
+/*
+//
+//
+//  S I D E B A R   S T A R T S   H E R E
+//
+//
+*/
+
+/* .aside-bar {
+  margin: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #616a7f;
+}
+
+section > hr {
+  border: 1px solid #2c5171;
+}
+
+.OS-cat {
+  color: black;
+  background-color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 5px;
+}
+
+#OS-cat-first {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.categories li {
+  margin: 3px 0;
+}
+
+.categories li a {
+  color: black;
+  text-shadow: 1px 1px 1px #2d3956;
+}
+
+.categories li a:hover {
+  color: red;
+  text-shadow: 3px 3px 2px #2d3956;
+} */
+
+/*
+//
+//
+//  L O G I N   M A I N   B E G I N S   H E R E   //
+//
+//
+*/
+
+.login-main {
+  margin: 0 30%;
+  margin-top: 2%;
+  background-image: url(../assets/pergamino.jpg);
+  /* background-color: rgba(186, 159, 111, 0.5); */
+  padding: 60px 0;
+  border: 1px solid snow;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 10px;
+}
+
+.div-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-login form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(232, 213, 180, 0.6);
+  border: 1px solid snow;
+  box-shadow: 1px 1px 6px black;
+  padding: 20px 15px;
+  border-radius: 5px;
+}
+
+#logintext {
+  text-shadow: 1px 1px 1px black;
+  font-size: 2em;
+  margin-bottom: 4px;
+}
+
+.div-login form input {
+  margin-bottom: 20px;
+  font-size: 1em;
+  border-radius: 40px;
+  border: 1px solid DimGray;
+  padding-left: 5px;
+  background-color: inherit;
+  color: black;
+  outline: 0;
+}
+
+#btn-login {
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 0;
+}
+
+#btn-login:hover {
+  color: #4682B4;
+}
+
+#btn-pass {
+  font-size: 0.8em;
+  text-align: center;
+  color: DimGray;
+}
+
+.signup {
+  margin-top: 40px;
+  text-shadow: 1px 1px 1px #ba9f6f;
+}
+
+/*
+//
+//
+//  CATALOG (CRUD)  BEGINS   //
+//
+//
+*/
+
+.crud-body{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.catalog-main {
+  flex-grow: 1;
+  background-color: #2d3956;
+  padding: 40px 20px;
+  margin: 20px auto;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+#create-redirect {
+  background-color: steelblue;
+  color: snow;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+#create-redirect:hover {
+  color: rgba(255,0,0,.8);
+  background-color: #2d3956;
+  border: 1px solid #ba9f6f;
+}
+
+#tabla {
+  margin: 20px 0;
+}
+
+table thead tr {
+  background-color: #ba9f6f;
+}
+
+table thead tr th {
+  padding: 0 5px;
+}
+
+table tbody tr {
+  background-color: #4682B4;
+  text-align: center;
+}
+
+table tbody tr td {
+  padding: 0 5px;
+}
+
+.img-crud {
+  width: 50px;
+  padding: 5px;
+}
+
+.btn-crud {
+  font-size: large;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  color: snow;
+}
+
+.btn-crud:hover {
+  cursor: pointer;
+}
+
+#btn-edit {
+  background-color: green;
+  margin-right: 5px;
+}
+
+#btn-delete {
+  background-color: firebrick;
+}
+
+/*
+//
+//  ITEM EDIT FORM
+//
+*/
+
+.hide {
+  display: none
+}
+
+.formEdit {
+  margin-top: 60px;
+}
+
+#editform {
+  display: flex;
+  flex-direction: column;
+}
+
+#editform div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+#editform div label {
+  color: snow;
+}
+
+form #name {
+  text-indent: 10px;
+}
+
+#editform div input, #editform div select, .edf-btn {
+  width: fit-content;
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+}
+
+.contenedor-btns-edit {
+  display: flex;
+  flex-direction: row;
+}
+
+.edf-btn {
+  padding: 5px;
+}
+
+.edf-btn:hover {
+  cursor: pointer;
+}
+
+#edfb-u {
+  background-color: gold;
+}
+
+#edfb-c {
+  background-color: firebrick;
+}
+
+
+/*
+//
+//
+//  CREATE PROGRAM  BEGINS   //
+//
+//
+*/
+
+.createprog-main {
+  flex-grow: 1;
+  background-color: #2d3956;
+  width: 80vw;
+  margin: 20px auto;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.create-section {
+  width: 40%;
+  padding: 15px 0;
+  margin: 20px auto;
+  border: 3px solid #ba9f6f;
+  border-radius: 10px;
+}
+
+.create-section form {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.create-section form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-section form div label {
+  color: snow;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.create-section form div input, .create-section form div select {
+  font-size: large;
+  border: none;
+  border-radius: 5px;
+}
+
+.create-section form div select:hover {
+  cursor: pointer;
+}
+
+#createb-upl {
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 10px;
+  font-size: large;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: snow;
+}
+
+#createb-upl:hover {
+  cursor: pointer;
+  background-color: yellowgreen;
+}
+
+/*
+//
+//
+//  FOOTER  BEGINS   //
+//
+//
+*/
+
+footer {
+  background-color: #2d3956;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  padding: 5px 0;
+  color: black;
+  border-bottom: 5px solid #ba9f6f;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.list ul > hr {
+  border: 1px dotted #ba9f6f;
+  margin-bottom: 10px;
+}
+
+.list ul li {
+  padding-bottom: 5px;
+  color: snow;
+}
+
+.list ul p {
+  display: flex;
+  justify-content: center;
+  margin: 6px 0 3px;
+  /* color: #4667b4; */
+  /* border-bottom: 1px solid #788086 */
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-top: 1px solid #ba9f6f;
+  font-size: 0.8em;
+  color: snow;
+}
