@@ -248,10 +248,10 @@ nav a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -200px;
-  margin-left: -200px;
-  width: 400px;
-  height: 400px;
+  margin-top: -300px;
+  margin-left: -250px;
+  width: 500px;
+  height: 600px;
   z-index: -10;
   background-color: #2d3956;
   padding: 10px;
@@ -268,8 +268,8 @@ nav a:hover {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 1.2em;
-  padding: 3px 6px;
+  font-size: 2em;
+  padding: 3px 8px;
 }
 
 .lgn-xmark:hover {
@@ -286,14 +286,20 @@ nav a:hover {
 }
 
 .div-login .home img {
-  width: 64px;
+  width: 86px;
   border-radius: 50%;
   border: 1px solid #ba9f6f;
   background-color: #4682B4;
 }
 
+#getonboard {
+  color: snow;
+  font-size: 2.5em;
+}
+
 .div-login .logintext {
   color: snow;
+  font-size: 1.5em;
 }
 
 .lgn-form {

@@ -6,7 +6,8 @@
     <title>AHOY! Roam Free</title>
     <link rel="icon" href="../assets/icon.ico">
     <meta name="viweport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/mediaQueries.css">
   </head>
@@ -14,25 +15,7 @@
 <!-- BODY STARTS -->
 
   <body class="index-body">
-    <header>
-      <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
-      <nav>
-        <a href="#">Intro</a>
-        <a href="#">News</a>
-        <a href="">Categories</a>
-        <a href="catalog.html">CRUD</a>
-        <a href="#">About</a>
-        <a href="#">Support</a>
-      </nav>
-      <div class="searchbar">
-        <img width="20px" src="../assets/search.png" alt="">
-        <input type="text" name="" value="" placeholder="Navigate..">
-        <button class="login" onclick="showLogin()">Log in</button>
-      </div>
-      <div id="hamb-btn">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </header>
+    <header></header>
 
 <!-- MAIN STARTS -->
 
@@ -62,7 +45,7 @@
         <div class="div-login">
           <i class="fa-solid fa-xmark lgn-xmark" onclick="hideLogin()"></i>
           <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
-          <p class="logintext">GET ON BOARD!</p>
+          <p id="getonboard">GET ON BOARD!</p>
           <form class="lgn-form" action="index.html" method="post">
             <input type="email" name="email" placeholder="Username">
             <input type="password" name="pass" placeholder="Password">
@@ -105,6 +88,7 @@
       </div>
       <p class="copy">Dfragmnt © 2022 · Codo a Codo 22522</p>
     </footer>
+    <script src="../Javascript/main.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../Javascript/crud.js"></script>
     <script src="../Javascript/navbuttons.js"></script>

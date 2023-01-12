@@ -6,7 +6,7 @@
 
 @media only screen and (max-width: 1000px) {
     #hamb-btn {
-        font-size: 2em;
+        font-size: 3.5em;
         display: inline;
     }
 
@@ -23,7 +23,26 @@
     }
 
     header .logo {
-        width: 100px;
+        width: 120px;
+    }
+
+    header .searchbar {
+        font-size: 2em;
+        flex-grow: 1;
+        margin: 0 60px;
+    }
+
+    .searchbar img {
+        width: 30px;
+    }
+
+    .searchbar input {
+        width: 80%;
+    }
+
+    .searchbar .login {
+        padding: 2px 8px;
+        font-size: 1em;
     }
 
     .index-main {
