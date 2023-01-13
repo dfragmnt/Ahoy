@@ -1,99 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>AHOY! Roam Free</title>
-    <link rel="icon" href="../assets/icon.ico">
-    <meta name="viweport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/mediaQueries.css">
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>AHOY! Roam Free</title>
+  <link rel="icon" href="../assets/icon.ico">
+  <meta name="viweport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/mediaQueries.css">
+</head>
 
 <!-- BODY STARTS -->
 
-  <body class="index-body">
-    <header></header>
+<body class="index-body">
+  <header></header>
 
-<!-- MAIN STARTS -->
+  <!-- MAIN STARTS -->
 
-    <main class="index-main">
-      <div class="content" id="app">
-        <div v-for="program in programs" class="card">
-          <div class="card-img-cnt">
-            <img class="imgCard" :src="'../assets/catalog/' +program.img" :alt="program.name + ' picture'">
-          </div>
-          <p class="name">{{program.name}}</p>
-          <div>
-            <p id="opsystem">· {{program.os}}</p>
-            <p>· {{program.category}}</p>
-          </div>
-          <div class="stats-container">
-            <p class="stats-numbers"><i title="Views" class="fa-regular fa-eye"></i>{{program.views}}</p>
-            <p class="stats-numbers"><i title="Completed Downloads" class="fa-solid fa-check"></i>{{program.downloads}}</p>
-          </div>
+  <main class="index-main">
+    <div class="content" id="app">
+      <div v-for="program in programs" class="card">
+        <div class="card-img-cnt">
+          <img class="imgCard" :src="'../assets/catalog/' +program.img" :alt="program.name + ' picture'">
+        </div>
+        <p class="name">{{program.name}}</p>
+        <div>
+          <p id="opsystem">· {{program.os}}</p>
+          <p>· {{program.category}}</p>
+        </div>
+        <div class="stats-container">
+          <p class="stats-numbers" title="Views"><i class="fa-regular fa-eye"></i>{{program.views}}</p>
+          <p class="stats-numbers" title="Completed Downloads"><i class="fa-solid fa-check"></i>{{program.downloads}}
+          </p>
         </div>
       </div>
+    </div>
 
-      <!-- LOGIN POPUP WINDOW -->
+    <!-- LOGIN POPUP WINDOW -->
 
-      <div class="curtain" onclick="hideLogin()"></div>
+    <div class="curtain" onclick="hideLogin()"></div>
+    <div class="login-container" id="loginwindow"></div>
 
-      <div class="login-container">
-        <div class="div-login">
-          <i class="fa-solid fa-xmark lgn-xmark" onclick="hideLogin()"></i>
-          <a href="index.html" class="home"><img src="../assets/logo.png" alt="AHOY Brand Logo" class="logo"></img></a>
-          <p id="getonboard">GET ON BOARD!</p>
-          <form class="lgn-form" action="index.html" method="post">
-            <input type="email" name="email" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
-            <button id="lgn-btn" type="button" onclick="login()">Log in</button>
-            <a href="#" id="btn-pass">Forgot Password?</a>
-          </form>
-          <p class="logintext">Don't have an account? <a href="register.html">Register</a></p>
-        </div>
-      </div>
-    </main>
+  </main>
 
-    <footer>
-      <a href="">AHOY!</a>
-      <div class="list">
-        <ul class="help">
-          <p>HELP</p>
-          <hr>
-          <li>VPN</li>
-          <li>ADBLOCKING</li>
-          <li>TORRENTING</li>
-          <li>SAFE BROWSING</li>
-        </ul>
-        <ul class="community">
-          <p>COMMUNITY</p>
-          <hr>
-          <li>FORUMS</li>
-          <li>REQUEST</li>
-          <li>TOP UPLOADERS</li>
-          <li>GROUPS</li>
-        </ul>
-        <ul class="language">
-          <p>LANGUAGE</p>
-          <hr>
-          <li>English</li>
-          <li>Español</li>
-          <li>Deutsch</li>
-          <li>日本語</li>
-          <li>中文(简体)</li>
-        </ul>
-      </div>
-      <p class="copy">Dfragmnt © 2022 · Codo a Codo 22522</p>
-    </footer>
-    <script src="../Javascript/main.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="../Javascript/crud.js"></script>
-    <script src="../Javascript/navbuttons.js"></script>
+  <footer></footer>
 
-  </body>
+  <script src="../Javascript/jquery_functions.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../Javascript/crud.js"></script>
+  <script src="../Javascript/navbuttons.js"></script>
+
+</body>
 
 <!-- BODY ENDS -->
 
