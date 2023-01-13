@@ -19,8 +19,9 @@
 
   <!-- MAIN STARTS -->
 
-  <main class="index-main">
-    <div class="content" id="app">
+  <main class="index-main" id="app">
+    <div v-if="loading" class="loader"></div>
+    <div v-else class="content">
       <div v-for="program in programs" class="card">
         <div class="card-img-cnt">
           <img class="imgCard" :src="'../assets/catalog/' +program.img" :alt="program.name + ' picture'">
